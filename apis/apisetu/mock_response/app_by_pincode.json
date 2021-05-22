@@ -1,0 +1,499 @@
+{
+  "centers": [
+    {
+      "center_id": 1284,
+      "name": "ESI Dispensary Raghubir Nagar",
+      "address": "ESI Raghubir Nagar Raghubir Nagar",
+      "state_name": "Delhi",
+      "district_name": "West Delhi",
+      "block_name": "Not Applicable",
+      "pincode": 110027,
+      "lat": 28,
+      "long": 77,
+      "from": "09:00:00",
+      "to": "17:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "aabd5ae1-bf8d-4be6-af1a-7014a13ae9e3",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVAXIN",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-05:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 1218,
+      "name": "UPHC Subhash Nagar UPHC",
+      "address": "UPHC Subhash Nagar Opposite 4 Block Behind Gurudawara.",
+      "state_name": "Delhi",
+      "district_name": "West Delhi",
+      "block_name": "Not Applicable",
+      "pincode": 110027,
+      "lat": 28,
+      "long": 77,
+      "from": "09:00:00",
+      "to": "17:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "c2d8c7c8-3c25-4e3b-9fdb-31a313c32e50",
+          "date": "22-05-2021",
+          "available_capacity": 9,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-05:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 9
+        }
+      ]
+    },
+    {
+      "center_id": 1275,
+      "name": "CGHS Rajouri Garden PHC",
+      "address": "CGHS Rajouri Garden",
+      "state_name": "Delhi",
+      "district_name": "West Delhi",
+      "block_name": "Not Applicable",
+      "pincode": 110027,
+      "lat": 28,
+      "long": 77,
+      "from": "09:00:00",
+      "to": "17:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "93ac9ee5-28e5-4bc3-9c40-5180ff5bb6ce",
+          "date": "22-05-2021",
+          "available_capacity": 10,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-05:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 10
+        }
+      ]
+    },
+    {
+      "center_id": 593218,
+      "name": "Tilaknagar Colony Hospital",
+      "address": "Tilak Nagar Colony Hospital 60 Block Ashok Nagar Tilak Nagar New Delhi",
+      "state_name": "Delhi",
+      "district_name": "West Delhi",
+      "block_name": "Not Applicable",
+      "pincode": 110027,
+      "lat": 28,
+      "long": 77,
+      "from": "09:00:00",
+      "to": "17:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "ff26cb69-8da6-463a-9428-da7e15a67133",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVAXIN",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-05:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 1250,
+      "name": "DGD Raghubir Nagar PHC",
+      "address": "Delhi Govt. Dispensary Raghubir Nagar  J.J. Colony Raghubir Nagar Delhi-27",
+      "state_name": "Delhi",
+      "district_name": "West Delhi",
+      "block_name": "Not Applicable",
+      "pincode": 110027,
+      "lat": 28,
+      "long": 77,
+      "from": "09:00:00",
+      "to": "17:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "ebfab74a-fa1b-4209-9cd3-a8d1d910ed76",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVAXIN",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-05:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        },
+        {
+          "session_id": "a1d284d3-4f6e-4973-a25f-6e86ee4daf05",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVAXIN",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-05:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        },
+        {
+          "session_id": "2b9ed331-b72c-4817-a2a4-50656e1598c1",
+          "date": "24-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVAXIN",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-05:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 1249,
+      "name": "MCW Raghubir Nagar PHC",
+      "address": "B-3 Raghubir Nagar Near Blind School New Delhi - 62",
+      "state_name": "Delhi",
+      "district_name": "West Delhi",
+      "block_name": "Not Applicable",
+      "pincode": 110027,
+      "lat": 28,
+      "long": 77,
+      "from": "09:00:00",
+      "to": "17:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "924db8a3-0c6f-4a23-802e-6415ac8162c8",
+          "date": "22-05-2021",
+          "available_capacity": 5,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-05:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 5
+        }
+      ]
+    },
+    {
+      "center_id": 614103,
+      "name": "Guru Govind Singh Hospital 3",
+      "address": "F- Block Raghubir NagarNew Delhi-27",
+      "state_name": "Delhi",
+      "district_name": "West Delhi",
+      "block_name": "Not Applicable",
+      "pincode": 110027,
+      "lat": 28,
+      "long": 77,
+      "from": "09:00:00",
+      "to": "17:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "1a0f5867-a0c4-459f-b1ef-a4e00aea9829",
+          "date": "22-05-2021",
+          "available_capacity": 10,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-05:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 10
+        }
+      ]
+    },
+    {
+      "center_id": 701932,
+      "name": "GBSSS No.2 KHYALA",
+      "address": "KHYALA",
+      "state_name": "Delhi",
+      "district_name": "West Delhi",
+      "block_name": "Not Applicable",
+      "pincode": 110027,
+      "lat": 28,
+      "long": 77,
+      "from": "09:00:00",
+      "to": "17:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "b92ff127-e8d1-41da-9e48-decf5e65e77e",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVAXIN",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-05:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 644957,
+      "name": "Guru Govind Singh Hospital 5",
+      "address": "F- Block Raghubir NagarNew Delhi-27",
+      "state_name": "Delhi",
+      "district_name": "West Delhi",
+      "block_name": "Not Applicable",
+      "pincode": 110027,
+      "lat": 28,
+      "long": 77,
+      "from": "09:00:00",
+      "to": "17:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "459f771c-072d-436c-9400-17e2c77373b3",
+          "date": "22-05-2021",
+          "available_capacity": 11,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-05:00PM"
+          ],
+          "available_capacity_dose1": 1,
+          "available_capacity_dose2": 10
+        }
+      ]
+    },
+    {
+      "center_id": 614100,
+      "name": "Guru Govind Singh Hospital 2",
+      "address": "F- Block Raghubir NagarNew Delhi-27",
+      "state_name": "Delhi",
+      "district_name": "West Delhi",
+      "block_name": "Not Applicable",
+      "pincode": 110027,
+      "lat": 28,
+      "long": 77,
+      "from": "09:00:00",
+      "to": "17:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "7b423d3b-9822-42cc-bcc8-6a6e40e521a6",
+          "date": "22-05-2021",
+          "available_capacity": 10,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-05:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 10
+        }
+      ]
+    },
+    {
+      "center_id": 644953,
+      "name": "Guru Govind Singh Hospital 4",
+      "address": "F- Block Raghubir NagarNew Delhi-27",
+      "state_name": "Delhi",
+      "district_name": "West Delhi",
+      "block_name": "Not Applicable",
+      "pincode": 110027,
+      "lat": 28,
+      "long": 77,
+      "from": "09:00:00",
+      "to": "17:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "66e5195c-4510-4441-b08e-c12c804f4966",
+          "date": "22-05-2021",
+          "available_capacity": 10,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-05:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 10
+        }
+      ]
+    },
+    {
+      "center_id": 1207,
+      "name": "Guru Govind Singh Hospital",
+      "address": "F- Block Raghubir NagarNew Delhi-27",
+      "state_name": "Delhi",
+      "district_name": "West Delhi",
+      "block_name": "Not Applicable",
+      "pincode": 110027,
+      "lat": 28,
+      "long": 77,
+      "from": "09:00:00",
+      "to": "17:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "d87c19bf-7e42-45a2-aa39-7e5b6f2a6849",
+          "date": "22-05-2021",
+          "available_capacity": 10,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-05:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 10
+        }
+      ]
+    },
+    {
+      "center_id": 644956,
+      "name": "Guru Govind Singh Hospital 6",
+      "address": "F- Block Raghubir NagarNew Delhi-27",
+      "state_name": "Delhi",
+      "district_name": "West Delhi",
+      "block_name": "Not Applicable",
+      "pincode": 110027,
+      "lat": 28,
+      "long": 77,
+      "from": "09:00:00",
+      "to": "17:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "d9e184a8-9dfe-41f0-aeb1-7bdfdeb8f048",
+          "date": "22-05-2021",
+          "available_capacity": 10,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-05:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 10
+        }
+      ]
+    },
+    {
+      "center_id": 677200,
+      "name": "Allopathic Dispensary Rajouri",
+      "address": "F- Block Rajouri Garden",
+      "state_name": "Delhi",
+      "district_name": "West Delhi",
+      "block_name": "Not Applicable",
+      "pincode": 110027,
+      "lat": 28,
+      "long": 77,
+      "from": "09:00:00",
+      "to": "17:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "77996e0a-30aa-4d04-abce-34c9fcff7c01",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVAXIN",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-05:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 614675,
+      "name": "MKW Hospital",
+      "address": "J-Block Community Center Rajouri Garden New Delhi",
+      "state_name": "Delhi",
+      "district_name": "West Delhi",
+      "block_name": "Not Applicable",
+      "pincode": 110027,
+      "lat": 28,
+      "long": 77,
+      "from": "11:30:00",
+      "to": "17:00:00",
+      "fee_type": "Paid",
+      "sessions": [
+        {
+          "session_id": "1d495e1b-b7e6-4fd7-8d07-6ba52bcc835d",
+          "date": "28-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVAXIN",
+          "slots": [
+            "11:30AM-12:30PM",
+            "12:30PM-01:30PM",
+            "01:30PM-02:30PM",
+            "02:30PM-05:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    }
+  ]
+}

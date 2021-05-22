@@ -1,0 +1,562 @@
+{
+  "centers": [
+    {
+      "center_id": 547703,
+      "name": "Raniganj BPHC",
+      "address": "Raniganj Bazar",
+      "state_name": "West Bengal",
+      "district_name": "West Bardhaman",
+      "block_name": "Raniganj",
+      "pincode": 713347,
+      "lat": 23,
+      "long": 87,
+      "from": "09:00:00",
+      "to": "18:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "ba63c3af-5682-407e-9670-fa6838209d5e",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-06:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 612155,
+      "name": "Palasdiha UPHC-6",
+      "address": "Palasdiha",
+      "state_name": "West Bengal",
+      "district_name": "West Bardhaman",
+      "block_name": "Durgapur MC",
+      "pincode": 713216,
+      "lat": 23,
+      "long": 87,
+      "from": "10:00:00",
+      "to": "16:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "a49d19ab-3c47-44bb-8937-3163835ebb49",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "10:00AM-11:00AM",
+            "11:00AM-12:00PM",
+            "12:00PM-01:00PM",
+            "01:00PM-04:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 598780,
+      "name": "Panagarh RH Covaxin",
+      "address": "Panagarh",
+      "state_name": "West Bengal",
+      "district_name": "West Bardhaman",
+      "block_name": "Kanksa",
+      "pincode": 713148,
+      "lat": 23,
+      "long": 87,
+      "from": "09:00:00",
+      "to": "18:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "b5048762-60a1-40e3-8692-7bcc196a5f57",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVAXIN",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-06:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 624401,
+      "name": "Baska SSK",
+      "address": "Baska Village",
+      "state_name": "West Bengal",
+      "district_name": "West Bardhaman",
+      "block_name": "Andal",
+      "pincode": 713321,
+      "lat": 23,
+      "long": 87,
+      "from": "09:00:00",
+      "to": "18:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "4f2c2a23-092e-4c06-83ef-49c8c8f47e12",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-06:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 616786,
+      "name": "Durgapur UPHC 11 Prantika",
+      "address": "Durgapur",
+      "state_name": "West Bengal",
+      "district_name": "West Bardhaman",
+      "block_name": "Durgapur MC",
+      "pincode": 713204,
+      "lat": 23,
+      "long": 87,
+      "from": "10:00:00",
+      "to": "16:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "fa505a20-aac3-42c7-803c-097a18cbb653",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "10:00AM-11:00AM",
+            "11:00AM-12:00PM",
+            "12:00PM-01:00PM",
+            "01:00PM-04:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 547690,
+      "name": "Panagarh RH",
+      "address": "Panagarh Bazar",
+      "state_name": "West Bengal",
+      "district_name": "West Bardhaman",
+      "block_name": "Kanksa",
+      "pincode": 713148,
+      "lat": 23,
+      "long": 87,
+      "from": "09:00:00",
+      "to": "18:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "a95b78ac-3d72-478d-824a-cfd7d9844e86",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-06:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 547705,
+      "name": "Barakar PHC",
+      "address": "Barakar",
+      "state_name": "West Bengal",
+      "district_name": "West Bardhaman",
+      "block_name": "Kulti Urban",
+      "pincode": 713324,
+      "lat": 23,
+      "long": 86,
+      "from": "09:00:00",
+      "to": "18:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "0a0c8648-6ae7-4257-ab18-925703dc9b2f",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-06:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 547720,
+      "name": "Akalpur BPHC",
+      "address": "Akalpur",
+      "state_name": "West Bengal",
+      "district_name": "West Bardhaman",
+      "block_name": "Jamuria Urban",
+      "pincode": 713336,
+      "lat": 23,
+      "long": 87,
+      "from": "10:00:00",
+      "to": "17:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "52ca8035-5926-45cc-b313-326852edb474",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "10:00AM-12:00PM",
+            "12:00PM-02:00PM",
+            "02:00PM-04:00PM",
+            "04:00PM-05:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 547699,
+      "name": "Asansol Mines Board Of Health",
+      "address": "Court Compound  Asansol",
+      "state_name": "West Bengal",
+      "district_name": "West Bardhaman",
+      "block_name": "Asansol MC",
+      "pincode": 713304,
+      "lat": 23,
+      "long": 86,
+      "from": "09:00:00",
+      "to": "18:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "4d04fed1-7eb6-461c-832d-14d3736d82dc",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-06:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 547689,
+      "name": "Laudoha SSK",
+      "address": "Laudoha",
+      "state_name": "West Bengal",
+      "district_name": "West Bardhaman",
+      "block_name": "Durgapur-Faridpur",
+      "pincode": 713385,
+      "lat": 23,
+      "long": 87,
+      "from": "09:00:00",
+      "to": "18:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "d0ae87d6-366f-4b10-8d7d-8695edee4b96",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-06:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 596999,
+      "name": "Angadpur PHC",
+      "address": "Durgapur",
+      "state_name": "West Bengal",
+      "district_name": "West Bardhaman",
+      "block_name": "Durgapur MC",
+      "pincode": 713206,
+      "lat": 23,
+      "long": 87,
+      "from": "09:00:00",
+      "to": "18:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "ea4b91c7-656a-4220-9eac-6b60466690b4",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-06:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 595927,
+      "name": "Khandra Ukhra Covaxin",
+      "address": "Andal",
+      "state_name": "West Bengal",
+      "district_name": "West Bardhaman",
+      "block_name": "Andal",
+      "pincode": 713363,
+      "lat": 23,
+      "long": 87,
+      "from": "09:00:00",
+      "to": "18:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "158dd5a2-63cf-456d-a038-b11ae25b2d5c",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVAXIN",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-06:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 547724,
+      "name": "Pandabeswar PHC",
+      "address": "Pandabeswar",
+      "state_name": "West Bengal",
+      "district_name": "West Bardhaman",
+      "block_name": "Pandabeswar",
+      "pincode": 713378,
+      "lat": 23,
+      "long": 87,
+      "from": "09:00:00",
+      "to": "18:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "e0e8d330-97cd-46aa-acc1-bc35ca35e75a",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-06:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 579725,
+      "name": "Divisional Railway Hospital As",
+      "address": "Asansol",
+      "state_name": "West Bengal",
+      "district_name": "West Bardhaman",
+      "block_name": "Asansol MC",
+      "pincode": 713301,
+      "lat": 23,
+      "long": 86,
+      "from": "09:00:00",
+      "to": "18:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "4ae948d2-50d7-4b49-b6bf-9e8d78d75933",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-06:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 547706,
+      "name": "Pithaikeary RH",
+      "address": "Pithaikeary",
+      "state_name": "West Bengal",
+      "district_name": "West Bardhaman",
+      "block_name": "Salanpur",
+      "pincode": 713386,
+      "lat": 23,
+      "long": 86,
+      "from": "09:00:00",
+      "to": "18:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "5a2d5494-f5cd-4c23-a05d-3165b353abd7",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-06:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 547698,
+      "name": "Bahadurpur RH",
+      "address": "Bahadurpur",
+      "state_name": "West Bengal",
+      "district_name": "West Bardhaman",
+      "block_name": "Jamuria",
+      "pincode": 713362,
+      "lat": 23,
+      "long": 87,
+      "from": "10:00:00",
+      "to": "17:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "9c80d325-3d14-46c7-985c-6a7d2c953044",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "10:00AM-12:00PM",
+            "12:00PM-02:00PM",
+            "02:00PM-04:00PM",
+            "04:00PM-05:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 595933,
+      "name": "Asansol DH Covaxin",
+      "address": "Asansol",
+      "state_name": "West Bengal",
+      "district_name": "West Bardhaman",
+      "block_name": "Asansol MC",
+      "pincode": 713301,
+      "lat": 23,
+      "long": 86,
+      "from": "09:00:00",
+      "to": "18:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "22236ed2-1f3d-4e3d-8251-58e4c9d2fd3c",
+          "date": "22-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVAXIN",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-06:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    },
+    {
+      "center_id": 547702,
+      "name": "Kelejora RH",
+      "address": "Kelejora",
+      "state_name": "West Bengal",
+      "district_name": "West Bardhaman",
+      "block_name": "Barabani",
+      "pincode": 713334,
+      "lat": 23,
+      "long": 87,
+      "from": "09:00:00",
+      "to": "18:00:00",
+      "fee_type": "Free",
+      "sessions": [
+        {
+          "session_id": "efa6bb89-e63d-41d9-b844-7c035530982e",
+          "date": "28-05-2021",
+          "available_capacity": 0,
+          "min_age_limit": 45,
+          "vaccine": "COVISHIELD",
+          "slots": [
+            "09:00AM-11:00AM",
+            "11:00AM-01:00PM",
+            "01:00PM-03:00PM",
+            "03:00PM-06:00PM"
+          ],
+          "available_capacity_dose1": 0,
+          "available_capacity_dose2": 0
+        }
+      ]
+    }
+  ]
+}
