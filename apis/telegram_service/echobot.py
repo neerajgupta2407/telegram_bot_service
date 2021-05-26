@@ -21,6 +21,9 @@ from telegram import Update, ForceReply, ReplyKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
 from app.models import State, District
+from apis.apisetu.apisetu import ApiSetu
+apisetu = ApiSetu()
+
 # Enable logging
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
@@ -31,6 +34,32 @@ logger = logging.getLogger(__name__)
 
 # Define a few command handlers. These usually take the two arguments update and
 # context.
+
+class Constants:
+    welcome_text = "Hi. Welcome to the bot"
+    help_text = "How can i help you."
+    list_states_txt = "Listing States\n"
+    show_district = "Below are the Districts is {state_name}"
+    selected_district = "Selected District is {district_name}"
+    unknown_command = "OOps...We didn't recognise the command: {text}"
+
+
+class Commands:
+    start = 'start'
+    help = 'help'
+    states = "States"
+    more_options = "More Options"
+    state_pretext = 'State: '
+    district_pretext = "District: "
+
+
+    reply_keyboards = {
+        'default': [
+            [states],
+            [help, more_options]
+        ]
+    }
+
 def start(update: Update, _: CallbackContext) -> None:
     """Send a message when the command /start is issued."""
     user = update.effective_user
@@ -44,44 +73,45 @@ def help_command(update: Update, _: CallbackContext) -> None:
     """Send a message when the command /help is issued."""
     update.message.reply_text('Help!')
 
+def build_state_name(state_name):
+    return Commands.state_pretext + state_name
+def build_district_name(district_name):
+    return Commands.district_pretext + district_name
+def create_reply_keyboard(options: list)-> list :
+    return [[l] for l in options]
+
 
 def echo(update: Update, _: CallbackContext) -> None:
     """Echo the user message."""
     text = update.message.text
     reply_text = ""
-    reply_keyboard = [
-        ["start"],
-        ["States"],
-        ["Welcome"]
-    ]
-    state_pretext = "State: "
-    district_pretext = "District: "
-    if text == '/start':
-        reply_text = "Hi. Welcome to the bot"
-    elif text in ["/help", 'help']:
-        reply_text = "How can i help you."
-    elif text == "States":
+    reply_keyboard = Commands.reply_keyboards.get('default')
+    if text == Commands.start:
+        reply_text = Constants.welcome_text
+    elif text == Commands.help:
+        reply_text = Constants.help_text
+    elif text == Commands.states:
         states = State.objects.all().order_by('state_name')
-        reply_text = "Listing States\n"
-        reply_keyboard = [
-            [state_pretext + state.state_name] for state in states]
+        reply_text = Constants.list_states_txt
+        reply_keyboard = create_reply_keyboard([build_state_name(state.state_name) for state in states])
 
-    elif text.startswith(state_pretext):
-        state_name = text.replace(state_pretext,'')
-        reply_text = f"Below are the Districts is {state_name}"
+    elif text.startswith(Commands.state_pretext):
+        state_name = text.replace(Commands.state_pretext,'')
+        reply_text =  Constants.show_district.format(state_name=state_name)
         districts = District.objects.filter(state__state_name=state_name)
-        reply_keyboard = [
-            [district_pretext + d.district_name]
-            for d in districts
-        ]
-    elif text.startswith(district_pretext):
-        district_name = text.replace(district_pretext,"")
-        reply_text = f"Selected District is {district_name}"
+        reply_keyboard = create_reply_keyboard([build_district_name(d.district_name) for d in districts])
+    elif text.startswith(Commands.district_pretext):
+        district_name = text.replace(Commands.district_pretext,"")
+        # reply_text = Constants.selected_district.format(district_name=district_name)
+        district = District.objects.get(district_name=district_name)
+        centers = apisetu.get_appointments_by_district(district.district_id)
+        reply_text = "\n".join([str(obj) for obj in centers])
+        # Ask for agre. If user is lookig for slot for 18 or 45.
+
 
     else:
-        reply_text = f"OOps...We didn't recognise the command: {text}"
+        reply_text = Constants.unknown_command.format(text=text)
     update.message.reply_text(reply_text, reply_markup=ReplyKeyboardMarkup(reply_keyboard,))
-
 
 def main() -> None:
     """Start the bot."""

@@ -46,7 +46,7 @@ class CenterObject(BaseObject):
         self.sessions = [SessionObject(**s) for s in self.sessions]
 
     def __repr__(self):
-        return "Center: {}({})".format(self.center_id,self.name)
+        return "Center: {}({})".format(self.name,self.center_id,)
 
 
 class SessionObject(BaseObject):

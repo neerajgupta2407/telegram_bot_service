@@ -1,4 +1,5 @@
 import requests
+from datetime import datetime
 from .config import *
 from .objects import *
 
@@ -13,6 +14,9 @@ class ApiSetu:
         else:
             raise Exception(f"Request Failed. Error {response.text}")
 
+    def _get_date(self):
+        date = datetime.today().date()
+        return date.strftime('%d-%m-%Y')
     def get_states(self):
         """
         Returns the list of states from Apisetu.org
@@ -30,13 +34,18 @@ class ApiSetu:
         resp = [DistrictObject(**d) for d in data.get('districts')]
         return resp
 
-    def get_appointments_by_district(self, district_id, date ):
+    def get_appointments_by_district(self, district_id, date=None ):
+        # Date=01-05-2021
+        if not date:
+            date = self._get_date()
         url = APPOINTMENT_BY_DIST.format(district_id=district_id, date=date)
         data = self._send_request(url)
         resp = [CenterObject(**d) for d in data.get('centers')]
         return resp
 
-    def get_appointments_by_pincode(self, pincode, date ):
+    def get_appointments_by_pincode(self, pincode, date=None ):
+        if not date:
+            date = self._get_date()
         url = APPOINTMENT_BY_PIN.format(pincode=pincode, date=date)
         data = self._send_request(url)
         resp = [CenterObject(**d) for d in data.get('centers')]
