@@ -21,6 +21,7 @@ from telegram import Update, ForceReply, ReplyKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
 from app.models import State, District
+from .helper import list_to_str, list_to_str_with_idx
 from apis.apisetu.apisetu import ApiSetu
 apisetu = ApiSetu()
 
@@ -31,9 +32,6 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-
-# Define a few command handlers. These usually take the two arguments update and
-# context.
 
 class Constants:
     welcome_text = "Hi. Welcome to the bot"
@@ -51,6 +49,8 @@ class Commands:
     more_options = "More Options"
     state_pretext = 'State: '
     district_pretext = "District: "
+    eighteen_pretext = "18+ slots in "
+    fortyfive_pretext = "45+ slots in "
 
 
     reply_keyboards = {
@@ -105,8 +105,36 @@ def echo(update: Update, _: CallbackContext) -> None:
         # reply_text = Constants.selected_district.format(district_name=district_name)
         district = District.objects.get(district_name=district_name)
         centers = apisetu.get_appointments_by_district(district.district_id)
-        reply_text = "\n".join([str(obj) for obj in centers])
-        # Ask for agre. If user is lookig for slot for 18 or 45.
+        # reply_text = list_to_str_with_idx([str(obj) for obj in centers])
+        reply_text = "Please select from bekow option"
+        reply_keyboard = [
+            [Commands.eighteen_pretext + district_name],
+            [Commands.fortyfive_pretext + district_name],
+        ]
+    elif text.startswith(Commands.eighteen_pretext):
+        # return the centers which only has 18+ slots
+        district_name = text.replace(Commands.eighteen_pretext,"")
+        # reply_text =  f"The centers which only has 18+ slots in {district_name}"
+        district = District.objects.get(district_name=district_name)
+        centers = apisetu.get_appointments_by_district(district.district_id)
+        selected_centers = [center for center in centers if center.is_18_session_available]
+        if selected_centers:
+            reply_text = list_to_str_with_idx([obj.detail_available_18_info_str for obj in selected_centers])
+        else:
+            reply_text = f" No Center Available in {district_name} for 18+ Slot"
+
+
+    elif text.startswith(Commands.fortyfive_pretext):
+        # return the centers which only has 45+ slots
+        district_name = text.replace(Commands.fortyfive_pretext,"")
+        reply_text =  f"The centers which only has 45+ slots {district_name}"
+        district = District.objects.get(district_name=district_name)
+        centers = apisetu.get_appointments_by_district(district.district_id)
+        selected_centers = [center for center in centers if center.is_45_session_available]
+        if selected_centers:
+            reply_text = list_to_str_with_idx([obj.detail_available_45_info_str for obj in selected_centers])
+        else:
+            reply_text = f" No Center Available in {district_name} for 45+ Slot"
 
 
     else:

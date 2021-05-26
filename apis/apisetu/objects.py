@@ -2,6 +2,8 @@
  Define Objects for all entities present in client APISETU.
  Eg:
 """
+
+
 class BaseObject:
     def __init__(self, **kwargs):
         for k in kwargs:
@@ -48,6 +50,37 @@ class CenterObject(BaseObject):
     def __repr__(self):
         return "Center: {}({})".format(self.name,self.center_id,)
 
+    @property
+    def available_18_sessions(self):
+        return [a for a in self.sessions if a.is_18 and a.is_available]
+
+    @property
+    def is_18_session_available(self):
+        return len(self.available_18_sessions) > 0
+
+
+    @property
+    def available_45_sessions(self):
+        return [a for a in self.sessions if a.is_45 and a.is_available]
+
+
+    @property
+    def is_45_session_available(self):
+        return len(self.available_45_sessions) > 0
+
+    @property
+    def detail_available_18_info_str(self):
+        text = f"{self.pincode} {self.name} {self.address}\n"
+        for a in self.available_18_sessions:
+            text += a.display_info_str + "\n"
+        return text
+
+    @property
+    def detail_available_45_info_str(self):
+        text = f"{self.pincode} {self.name} {self.address}\n"
+        for a in self.available_45_sessions:
+            text += a.display_info_str + "\n"
+        return text
 
 class SessionObject(BaseObject):
     session_id: int
@@ -63,3 +96,23 @@ class SessionObject(BaseObject):
     def __repr__(self):
         return "Session: Date:{}, Vaccine {}, Availability {}".format(self.date,self.vaccine, self.available_capacity)
 
+    @property
+    def slots_str(self):
+        return ", ".join(self.slots)
+
+    @property
+    def is_available(self):
+        return self.available_capacity > 0
+
+    @property
+    def is_18(self):
+        return self.min_age_limit == 18
+
+    @property
+    def is_45(self):
+        return self.min_age_limit == 45
+
+    @property
+    def display_info_str(self):
+        text = f"{self.date}:  {self.vaccine} -> Available Slots:{self.available_capacity}\n"
+        return text
