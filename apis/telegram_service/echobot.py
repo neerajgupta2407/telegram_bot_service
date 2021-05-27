@@ -106,7 +106,7 @@ def echo(update: Update, _: CallbackContext) -> None:
         district = District.objects.get(district_name=district_name)
         centers = apisetu.get_appointments_by_district(district.district_id)
         # reply_text = list_to_str_with_idx([str(obj) for obj in centers])
-        reply_text = "Please select from bekow option"
+        reply_text = "Please select from below option"
         reply_keyboard = [
             [Commands.eighteen_pretext + district_name],
             [Commands.fortyfive_pretext + district_name],
@@ -135,8 +135,6 @@ def echo(update: Update, _: CallbackContext) -> None:
             reply_text = list_to_str_with_idx([obj.detail_available_45_info_str for obj in selected_centers])
         else:
             reply_text = f" No Center Available in {district_name} for 45+ Slot"
-
-
     else:
         reply_text = Constants.unknown_command.format(text=text)
     update.message.reply_text(reply_text, reply_markup=ReplyKeyboardMarkup(reply_keyboard,))
