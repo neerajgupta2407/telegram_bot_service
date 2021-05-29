@@ -2,7 +2,7 @@
  Define Objects for all entities present in client APISETU.
  Eg:
 """
-
+from telegram_bot_service.settings import MIN_SLOTS
 
 class BaseObject:
     def __init__(self, **kwargs):
@@ -81,6 +81,32 @@ class CenterObject(BaseObject):
         for a in self.available_45_sessions:
             text += a.display_info_str + "\n"
         return text
+
+    @property
+    def min_18_slots_available(self):
+        return (
+                len(
+                    [
+                        a
+                        for a in self.sessions
+                        if a.is_18 and a.available_capacity >= MIN_SLOTS
+                    ]
+                )
+                > 0
+        )
+
+    @property
+    def min_45_slots_available(self):
+        return (
+                len(
+                    [
+                        a
+                        for a in self.sessions
+                        if a.is_45 and a.available_capacity >= MIN_SLOTS
+                    ]
+                )
+                > 0
+        )
 
 class SessionObject(BaseObject):
     session_id: int
