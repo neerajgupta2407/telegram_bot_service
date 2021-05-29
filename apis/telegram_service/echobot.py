@@ -20,7 +20,7 @@ import logging
 from telegram import Update, ForceReply, ReplyKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
-from app.models import State, District
+from app.models import State, District, TelegramUser, AgeType
 from .helper import list_to_str, list_to_str_with_idx
 from apis.apisetu.apisetu import ApiSetu
 apisetu = ApiSetu()
@@ -32,6 +32,9 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
+class Position:
+    Top = 't'
+    Bottom = 'b'
 
 class Constants:
     welcome_text = "Hi. Welcome to the bot"
@@ -51,7 +54,7 @@ class Commands:
     district_pretext = "District: "
     eighteen_pretext = "18+ slots in "
     fortyfive_pretext = "45+ slots in "
-
+    backbutton_pretext = "Back TO << "
 
     reply_keyboards = {
         'default': [
@@ -80,29 +83,53 @@ def build_district_name(district_name):
 def create_reply_keyboard(options: list)-> list :
     return [[l] for l in options]
 
+def append_to_reply_keyboard(reply_keyboard, options: list, position=Position.Top)-> list :
+    # Appending options to reply keyboard.
+    if not options:
+        return reply_keyboard
+    new_keyboard_options = create_reply_keyboard(options)
+    if position == Position.Top:
+        return  new_keyboard_options + reply_keyboard
+    else:
+        return reply_keyboard + new_keyboard_options
+
+def append_back_button(reply_keyboard, text, position=Position.Top):
+    button_text = Commands.backbutton_pretext + text
+    return append_to_reply_keyboard(reply_keyboard, [button_text], position)
 
 def echo(update: Update, _: CallbackContext) -> None:
     """Echo the user message."""
     text = update.message.text
+    chat_id = update.message.chat_id
+    user_name = update.message.from_user.full_name
+    tele_user_obj = TelegramUser.subscribe(chat_id, user_name)
+    user_recent_searches = tele_user_obj.get_recent_searches(1)
     reply_text = ""
     reply_keyboard = Commands.reply_keyboards.get('default')
-    if text == Commands.start:
+    text = text.replace(Commands.backbutton_pretext, "")
+    if text in [Commands.start, '/start']:
         reply_text = Constants.welcome_text
+        reply_keyboard = append_to_reply_keyboard(reply_keyboard, user_recent_searches)
     elif text == Commands.help:
         reply_text = Constants.help_text
     elif text == Commands.states:
         states = State.objects.all().order_by('state_name')
         reply_text = Constants.list_states_txt
         reply_keyboard = create_reply_keyboard([build_state_name(state.state_name) for state in states])
+        reply_keyboard = append_to_reply_keyboard(reply_keyboard, user_recent_searches)
 
     elif text.startswith(Commands.state_pretext):
         state_name = text.replace(Commands.state_pretext,'')
-        reply_text =  Constants.show_district.format(state_name=state_name)
+        reply_text = Constants.show_district.format(state_name=state_name)
         districts = District.objects.filter(state__state_name=state_name)
         reply_keyboard = create_reply_keyboard([build_district_name(d.district_name) for d in districts])
+        reply_keyboard = append_back_button(reply_keyboard, Commands.states, Position.Top)
+
+
+
     elif text.startswith(Commands.district_pretext):
+        tele_user_obj.save_search_query(text)
         district_name = text.replace(Commands.district_pretext,"")
-        # reply_text = Constants.selected_district.format(district_name=district_name)
         district = District.objects.get(district_name=district_name)
         centers = apisetu.get_appointments_by_district(district.district_id)
         # reply_text = list_to_str_with_idx([str(obj) for obj in centers])
@@ -111,7 +138,10 @@ def echo(update: Update, _: CallbackContext) -> None:
             [Commands.eighteen_pretext + district_name],
             [Commands.fortyfive_pretext + district_name],
         ]
+        reply_keyboard = append_back_button(reply_keyboard, text, Position.Top)
+
     elif text.startswith(Commands.eighteen_pretext):
+        tele_user_obj.save_search_query(text)
         # return the centers which only has 18+ slots
         district_name = text.replace(Commands.eighteen_pretext,"")
         # reply_text =  f"The centers which only has 18+ slots in {district_name}"
@@ -121,11 +151,12 @@ def echo(update: Update, _: CallbackContext) -> None:
         if selected_centers:
             reply_text = list_to_str_with_idx([obj.detail_available_18_info_str for obj in selected_centers])
         else:
-            reply_text = f" No Center Available in {district_name} for 18+ Slot"
-
+            tele_user_obj.save_alert(AgeType.eighteen, district_id=district.pk)
+            reply_text = f" No Center Available in {district_name} for 18+ Slot. We will notify you when there is any slot available."
 
     elif text.startswith(Commands.fortyfive_pretext):
         # return the centers which only has 45+ slots
+        tele_user_obj.save_search_query(text)
         district_name = text.replace(Commands.fortyfive_pretext,"")
         reply_text =  f"The centers which only has 45+ slots {district_name}"
         district = District.objects.get(district_name=district_name)
@@ -134,7 +165,8 @@ def echo(update: Update, _: CallbackContext) -> None:
         if selected_centers:
             reply_text = list_to_str_with_idx([obj.detail_available_45_info_str for obj in selected_centers])
         else:
-            reply_text = f" No Center Available in {district_name} for 45+ Slot"
+            tele_user_obj.save_alert(AgeType.forty_five, district_id=district.pk)
+            reply_text = f" No Center Available in {district_name} for 45+ Slot We will notify you when there is any slot available."
     else:
         reply_text = Constants.unknown_command.format(text=text)
     update.message.reply_text(reply_text, reply_markup=ReplyKeyboardMarkup(reply_keyboard,))
