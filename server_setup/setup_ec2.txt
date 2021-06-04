@@ -1,0 +1,54 @@
+ssh ubuntu@65.2.82.198 -i ~/.ssh/dsacademy.pem
+# AMI ID: ami-024ec811d3f5f30f2
+
+# Installing python and other essentials
+https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-programming-environment-on-an-ubuntu-18-04-server
+
+# Create New EC2 instance and upgrade the dependencies.
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get update
+sudo apt-get -y upgrade
+
+sudo apt-get install python3.7 libpython3.7-dev python3-all-dev python3-venv
+
+
+
+### Install Virtaulenv
+mkdir -p codes/telegram_bot
+python3 --version
+python3 -m venv tele_venv
+ls
+source tele_venv/bin/activate
+which python
+python --version
+
+## CLone Repo.
+git clone https://github.com/neerajgupta2407/telegram_bot_service.git
+
+cd telegram_bot_service
+
+
+####
+pip freeze
+
+
+install python packages.
+    pip install -r installed_packages
+
+apply migrations:
+python manage.py migrate
+run server :
+python manage.py runserver 0.0.0.0:8000
+# Verify server.
+Add ip to Allowed Host
+http://65.2.82.198/
+
+
+run_Service. : python manage.py telebot.
+
+
+Create SUperuser. : python manage.py createsuperuser
+
+
+
+

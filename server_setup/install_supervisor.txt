@@ -1,0 +1,51 @@
+## Install Suopervidor for Deamonising services.
+
+Supervisor is a Python program that allows you to control and keep running any unix processes.
+It can also restart crashed processes.
+We use it to make sure Process are always running.
+Process may be:
+1. Admin Panel
+2. TelegramService.
+3. Celery Worker
+4. Flower
+5. Celery-Beat
+
+
+Install Supervisor
+    sudo apt-get install supervisor
+
+7) Create file /etc/supervisor/conf.d/my_services.conf
+##############################################################
+[program:telegram_bot_service]
+command=/home/ubuntu/codes/telegram_bot/tele_venv/bin/python /home/ubuntu/codes/telegram_bot/telegram_bot_service/manage.py telebot
+directory=/home/ubuntu/codes/telegram_bot/telegram_bot_service
+numprocs=1
+stdout_logfile=/home/ubuntu/codes/telegram_bot/telegram_bot_service/logs/telegram-bot.log
+stderr_logfile=/home/ubuntu/codes/telegram_bot/telegram_bot_service/logs/telegram-bot-error.log
+autostart=true
+autorestart=true
+startsecs=10
+
+[program:admin_panel_service]
+command=/home/ubuntu/codes/telegram_bot/tele_venv/bin/python /home/ubuntu/codes/telegram_bot/telegram_bot_service/manage.py runserver 0.0.0.0:8000
+directory=/home/ubuntu/codes/telegram_bot/telegram_bot_service
+numprocs=1
+stdout_logfile=/home/ubuntu/codes/telegram_bot/telegram_bot_service/logs/admin-panel.log
+stderr_logfile=/home/ubuntu/codes/telegram_bot/telegram_bot_service/logs/admin-panel.log
+autostart=true
+autorestart=true
+startsecs=10
+##############################################################
+
+
+Supervisor Commands.
+    sudo supervisorctl reread
+    sudo supervisorctl update
+    sudo supervisorctl status
+# restarting worker.
+    sudo supervisorctl restart all
+    sudo supervisorctl stop all
+    sudo supervisorctl start all
+
+
+
