@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import sentry_sdk
 from pathlib import Path
 from decouple import config
 
@@ -129,3 +129,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MIN_SLOTS = int(config('MIN_SLOTS')) # 10
 MAX_ALERTS = int(config('MAX_ALERTS')) #5
+
+if config('SENTRY_DNS'):
+    sentry_sdk.init(
+        config('SENTRY_DNS'),
+
+        # Set traces_sample_rate to 1.0 to capture 100%
+        # of transactions for performance monitoring.
+        # We recommend adjusting this value in production.
+        traces_sample_rate=1.0
+    )

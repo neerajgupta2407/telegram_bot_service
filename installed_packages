@@ -6,3 +6,4 @@ django-kronos==1.0
 python-decouple==3.3
 fabric==2.5.0
 django-environ
+sentry-sdk
